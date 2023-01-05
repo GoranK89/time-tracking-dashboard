@@ -1,0 +1,9 @@
+@import 'config';
+@import 'profileBox';
+
+.dashboard_container {
+  display: flex;
+  max-width: 115rem;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}

@@ -1,7 +1,9 @@
+import ProfileBox from './components/ProfileBox';
+
 function App() {
   return (
-    <main>
-      <h1>Time tracking dashboard</h1>
+    <main className="dashboard_container">
+      <ProfileBox />
     </main>
   );
 }

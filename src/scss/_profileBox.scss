@@ -1,0 +1,60 @@
+.user-profile_wrapper {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: $darkBlue;
+
+  .profile-img-description_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 0 3rem 3rem;
+    gap: 3rem;
+    border-radius: 1rem;
+    background-color: $blue;
+
+    img {
+      height: 100px;
+      width: auto;
+      border-radius: 20rem;
+      border: 3px solid $white;
+    }
+
+    .profile-description {
+      p {
+        margin-bottom: 0.4rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $paleBlue;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        color: $white;
+      }
+    }
+  }
+
+  .time-periods_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0 3rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $paleBlue;
+
+    li {
+      cursor: pointer;
+
+      &:active,
+      &:hover {
+        color: $white;
+        transition: 0.3s;
+      }
+    }
+  }
+}

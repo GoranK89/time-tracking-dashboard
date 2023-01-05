@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* Primary */
+
+$blue: hsl(246, 80%, 60%);
+$lightRed-work: hsl(15, 100%, 70%);
+$softBlue-play: hsl(195, 74%, 62%);
+$lightRed-study: hsl(348, 100%, 68%);
+$limeGreen-exercise: hsl(145, 58%, 55%);
+$violet-social: hsl(264, 64%, 52%);
+$softOrange-selfCare: hsl(43, 84%, 65%);
+
+/* Neutral */
+
+$veryDarkBlue: hsl(226, 43%, 10%);
+$darkBlue: hsl(235, 46%, 20%);
+$desaturatedBlue: hsl(235, 45%, 61%);
+$paleBlue: hsl(236, 100%, 87%);
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  background-color: $veryDarkBlue;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Remove default styling for certain elements */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
