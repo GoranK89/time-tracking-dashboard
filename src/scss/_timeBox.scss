@@ -1,0 +1,63 @@
+.time-box_container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  background-color: $lightRed-work;
+
+  .background {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 60px;
+    }
+  }
+
+  .time-box-content_container {
+    flex-grow: 1;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: $darkBlue;
+
+    .time-type_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: 500;
+        font-size: 1.8rem;
+      }
+
+      img {
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+          opacity: 0.7;
+          transition: 0.25s;
+        }
+      }
+    }
+
+    .time-spent_wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .current-hrs {
+        font-size: 5rem;
+        font-weight: 300;
+      }
+      .previous-hrs {
+        font-size: 1.4rem;
+        color: $paleBlue;
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 @import 'config';
 @import 'profileBox';
+@import 'timeBox';
 
 .dashboard_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   max-width: 115rem;
   margin: 5rem auto;
   padding: 0 2rem;

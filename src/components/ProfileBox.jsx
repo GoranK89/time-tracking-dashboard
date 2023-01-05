@@ -2,7 +2,7 @@ import ImgProfile from '/images/image-jeremy.png';
 
 const ProfileBox = () => {
   return (
-    <div className="user-profile_wrapper">
+    <div className="user-profile_container">
       <div className="profile-img-description_wrapper">
         <img src={ImgProfile} alt="profile picture of Jeremy" />
 
