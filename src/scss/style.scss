@@ -7,6 +7,26 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   max-width: 115rem;
-  margin: 5rem auto;
+  margin: 20rem auto;
   padding: 0 2rem;
+}
+
+// background card colors
+.background-work {
+  background-color: $lightRed-work;
+}
+.background-play {
+  background-color: $softBlue-play;
+}
+.background-study {
+  background-color: $lightRed-study;
+}
+.background-exercise {
+  background-color: $limeGreen-exercise;
+}
+.background-social {
+  background-color: $violet-social;
+}
+.background-self-care {
+  background-color: $softOrange-selfCare;
 }

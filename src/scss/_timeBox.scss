@@ -6,13 +6,13 @@
 
   .background {
     position: relative;
-    height: 50px;
+    height: 35px;
     overflow: hidden;
     border-radius: 1rem 1rem 0 0;
 
     img {
       position: absolute;
-      right: 0;
+      right: 10px;
       top: -5px;
       width: 60px;
     }
@@ -24,11 +24,19 @@
     border-radius: 1rem;
     color: white;
     background-color: $darkBlue;
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      background-color: $desaturatedBlue;
+    }
 
     .time-type_wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 2rem;
 
       h2 {
         font-weight: 500;
@@ -51,7 +59,7 @@
       flex-direction: column;
 
       .current-hrs {
-        font-size: 5rem;
+        font-size: 4.6rem;
         font-weight: 300;
       }
       .previous-hrs {

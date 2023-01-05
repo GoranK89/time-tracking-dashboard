@@ -7,7 +7,7 @@ function App() {
   const ctx = useContext(ActivitiesContext);
   console.log(ctx);
 
-  const TimeBoxes = () => {
+  const TimeBoxesWeek = () => {
     return ctx.map(item => (
       <TimeBox
         key={item.title}
@@ -18,10 +18,12 @@ function App() {
     ));
   };
 
+  //TODO make 1 for day & 1 for month
+
   return (
     <main className="dashboard_container">
       <ProfileBox />
-      <TimeBoxes />
+      <TimeBoxesWeek />
     </main>
   );
 }
