@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import ActivitiesContext from './context/activities-context';
 import ProfileBox from './components/ProfileBox';
 import TimeBox from './components/TimeBox';
+import Atribution from './components/Atribution';
 
 function App() {
   const [period, setPeriod] = useState('weekly');
@@ -33,6 +34,7 @@ function App() {
     <main className="dashboard_container">
       <ProfileBox handlePeriodChange={selectedPeriodHandler} />
       <TimeBoxes />
+      <Atribution />
     </main>
   );
 }

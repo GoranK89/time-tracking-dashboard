@@ -1,0 +1,45 @@
+@media screen and (max-width: 830px) {
+  .dashboard_container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .user-profile_container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .dashboard_container {
+    grid-template-columns: 1fr;
+  }
+
+  .user-profile_container {
+    .profile-img-description_wrapper {
+      flex-direction: row;
+      align-items: flex-start;
+
+      img {
+        height: 90px;
+      }
+    }
+
+    .time-periods_wrapper {
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 2rem;
+    }
+  }
+
+  /* Time box */
+  .time-box_container {
+    .time-box-content_container {
+      .time-spent_wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}

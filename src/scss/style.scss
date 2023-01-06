@@ -1,6 +1,7 @@
 @import 'config';
 @import 'profileBox';
 @import 'timeBox';
+@import 'atribution';
 
 .dashboard_container {
   display: grid;
@@ -30,3 +31,5 @@
 .background-self-care {
   background-color: $softOrange-selfCare;
 }
+
+@import 'mediaQuerries';
