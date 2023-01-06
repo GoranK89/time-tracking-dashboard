@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import ImgProfile from '/images/image-jeremy.png';
 
-const ProfileBox = () => {
+const ProfileBox = props => {
   const [selectedPeriod, setSelectedPeriod] = useState('weekly');
 
   const handlePeriodClick = period => {
     setSelectedPeriod(period);
+    props.handlePeriodChange(period);
   };
 
   const setActiveClass = period => {

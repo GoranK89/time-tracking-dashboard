@@ -37,6 +37,17 @@ const TimeBox = props => {
   const { activityType } = props;
   const { className, icon } = activityTypeMap[activityType] || {};
 
+  const { selectedPeriod } = props;
+  const displayPeriodText = () => {
+    const periodMap = {
+      daily: 'day',
+      weekly: 'week',
+      monthly: 'month',
+    };
+
+    return periodMap[selectedPeriod] || '';
+  };
+
   return (
     <div className={className || 'time-box_container'}>
       <div className="background">
@@ -50,7 +61,7 @@ const TimeBox = props => {
         <div className="time-spent_wrapper">
           <span className="current-hrs">{props.currentHours}hrs</span>
           <span className="previous-hrs">
-            Last week - {props.previousHours}hrs
+            Last {displayPeriodText()} - {props.previousHours}hrs
           </span>
         </div>
       </div>

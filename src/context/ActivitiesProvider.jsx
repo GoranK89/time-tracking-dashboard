@@ -8,6 +8,9 @@ const ActivitiesProvider = props => {
       return {
         title: item.title,
         timeframes: item.timeframes,
+        periodDay: item.timeframes.daily,
+        periodWeek: item.timeframes.weekly,
+        periodMonth: item.timeframes.monthly,
       };
     });
   }, [dataActivities]);
