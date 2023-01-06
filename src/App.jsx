@@ -5,7 +5,6 @@ import TimeBox from './components/TimeBox';
 
 function App() {
   const ctx = useContext(ActivitiesContext);
-  console.log(ctx);
 
   const TimeBoxesWeek = () => {
     return ctx.map(item => (
@@ -17,7 +16,6 @@ function App() {
       />
     ));
   };
-
   //TODO make 1 for day & 1 for month
 
   return (

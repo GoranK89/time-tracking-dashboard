@@ -2,25 +2,14 @@ import { useState } from 'react';
 import ImgProfile from '/images/image-jeremy.png';
 
 const ProfileBox = () => {
-  const [daily, setDaily] = useState(false);
-  const [weekly, setWeekly] = useState(true);
-  const [monthly, setMonthly] = useState(false);
+  const [selectedPeriod, setSelectedPeriod] = useState('weekly');
 
-  // Reminder: refactor!
-  const toggleDaily = () => {
-    setDaily(!daily);
-    setWeekly(false);
-    setMonthly(false);
+  const handlePeriodClick = period => {
+    setSelectedPeriod(period);
   };
-  const toggleWeekly = () => {
-    setWeekly(!weekly);
-    setDaily(false);
-    setMonthly(false);
-  };
-  const toggleMonthly = () => {
-    setMonthly(!monthly);
-    setWeekly(false);
-    setDaily(false);
+
+  const setActiveClass = period => {
+    return selectedPeriod === period ? 'selected' : '';
   };
 
   return (
@@ -37,13 +26,22 @@ const ProfileBox = () => {
         </div>
       </div>
       <ul className="time-periods_wrapper">
-        <li onClick={toggleDaily} className={daily ? 'selected' : ''}>
+        <li
+          onClick={() => handlePeriodClick('daily')}
+          className={setActiveClass('daily')}
+        >
           Daily
         </li>
-        <li onClick={toggleWeekly} className={weekly ? 'selected' : ''}>
+        <li
+          onClick={() => handlePeriodClick('weekly')}
+          className={setActiveClass('weekly')}
+        >
           Weekly
         </li>
-        <li onClick={toggleMonthly} className={monthly ? 'selected' : ''}>
+        <li
+          onClick={() => handlePeriodClick('monthly')}
+          className={setActiveClass('monthly')}
+        >
           Monthly
         </li>
       </ul>
