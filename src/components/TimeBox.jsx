@@ -6,59 +6,45 @@ import IconSocial from '/images/icon-social.svg';
 import IconStudy from '/images/icon-study.svg';
 import IconWork from '/images/icon-work.svg';
 
+const activityTypeMap = {
+  Work: {
+    className: 'time-box_container background-work',
+    icon: IconWork,
+  },
+  Play: {
+    className: 'time-box_container background-play',
+    icon: IconPlay,
+  },
+  Study: {
+    className: 'time-box_container background-study',
+    icon: IconStudy,
+  },
+  Exercise: {
+    className: 'time-box_container background-exercise',
+    icon: IconExercise,
+  },
+  Social: {
+    className: 'time-box_container background-social',
+    icon: IconSocial,
+  },
+  'Self Care': {
+    className: 'time-box_container background-self-care',
+    icon: IconSelfCare,
+  },
+};
+
 const TimeBox = props => {
-  // Reminder: refactor!
-
-  const matchColors = () => {
-    if (props.activityType === 'Work') {
-      return 'time-box_container background-work';
-    }
-    if (props.activityType === 'Play') {
-      return 'time-box_container background-play';
-    }
-    if (props.activityType === 'Study') {
-      return 'time-box_container background-study';
-    }
-    if (props.activityType === 'Exercise') {
-      return 'time-box_container background-exercise';
-    }
-    if (props.activityType === 'Social') {
-      return 'time-box_container background-social';
-    }
-    if (props.activityType === 'Self Care') {
-      return 'time-box_container background-self-care';
-    }
-  };
-
-  const matchIcons = () => {
-    if (props.activityType === 'Work') {
-      return IconWork;
-    }
-    if (props.activityType === 'Play') {
-      return IconPlay;
-    }
-    if (props.activityType === 'Study') {
-      return IconStudy;
-    }
-    if (props.activityType === 'Exercise') {
-      return IconExercise;
-    }
-    if (props.activityType === 'Social') {
-      return IconSocial;
-    }
-    if (props.activityType === 'Self Care') {
-      return IconSelfCare;
-    }
-  };
+  const { activityType } = props;
+  const { className, icon } = activityTypeMap[activityType] || {};
 
   return (
-    <div className={matchColors()}>
+    <div className={className || 'time-box_container'}>
       <div className="background">
-        <img src={matchIcons()} alt="an icon" />
+        <img src={icon || ''} alt="an icon" />
       </div>
       <div className="time-box-content_container">
         <div className="time-type_wrapper">
-          <h2>{props.activityType}</h2>
+          <h2>{activityType}</h2>
           <img src={IconElipsis} alt="icon of 3 dots" />
         </div>
         <div className="time-spent_wrapper">

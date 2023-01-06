@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useCallback, useContext } from 'react';
 import ActivitiesContext from './context/activities-context';
 import ProfileBox from './components/ProfileBox';
 import TimeBox from './components/TimeBox';
